@@ -1,0 +1,97 @@
+// Typography
+$base-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 1.6rem;//1em;
+$bold-font-weight: 700;
+$base-line-height: 1.6;//1.5;
+$heading-line-height: 1.2;
+// Other Sizes
+$base-border-radius: 2px;
+$base-spacing: 8px;
+$small-spacing: 6px;
+// Colors
+$brand-primary:         #DF691A;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+$white: #fafafa;
+$black: #212121;
+$blue: #2980b9;//#1976d2;
+$red: #e74c3c;//#d32f2f;
+$light-yellow: #f0cd66;
+$light-green: #4ab471;
+$grey-0: #f6f7f7;
+$grey-1: #dfe0e1;
+$grey-2: #cfd8dc;
+$grey-5: #adb5bd;
+$grey-7: #293f54;
+$hint-grey: #7b808c;
+// Font Colors
+$base-font-color: $grey-7;
+$action-color: #3498db;//$blue;
+// Background Colors
+$base-background-color: $grey-0;
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 1px;
+// Flash Colors
+$flash-colors: (
+  alert: $light-yellow,
+  error: $red,
+  notice: mix($white, $blue, 50%),
+  success: $light-green
+);
+// Border
+$base-border-color: $grey-1;
+$base-border: 1px solid $base-border-color;
+// Transitions
+$base-duration: 250ms;
+$base-timing: ease-in-out;
+// Theme
+// $theme-colors: (
+//   primary: #3f51b5,
+//   secondary: #90a4ae,
+//   success: #009688,
+//   info: #2196f3,
+//   warning: #ff5722,
+//   danger: #f44336
+// );
+$theme-colors: (
+  primary: $brand-primary,
+  secondary: #90a4ae,
+  success: $brand-success,
+  info: $brand-info,
+  warning: $brand-warning,
+  danger: $brand-danger
+);
+$theme-color-interval: 8%;
+
+@mixin color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= 150) {
+    color: #111;
+  } @else {
+    color: #fafafa;
+  }
+}
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, #333, #fff);
+
+  @if $level < 0 {
+    @return mix($color-base, $color, $level * -1 * $theme-color-interval);
+  } @else {
+    @return mix($color-base, $color, $level * $theme-color-interval);
+  }
+}

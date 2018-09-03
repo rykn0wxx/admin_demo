@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="rykn0wxx">
+  <head>
+    <meta charset="UTF-8" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  	<meta name="author" content="rykn0wxx" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <title>
+      <%= content_for?(:title) ? yield(:title) + " | rykn0wxx" : "rykn0wxx" %>
+    </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= tag :meta, name: 'turbolinks-root', content: '/' %>
+    <%= tag :meta, name: 'turbolinks-cache-control', content: 'no-cache' %>
+  </head>
+
+  <body class="mudhead <%= action_name %>">
+    <%= render 'shared/navigation' if show_navigation? %>
+    <% if controller_name == "dashboard" && action_name == "landing" %>
+      <%= yield %>
+    <% else %>
+      <div class="container">
+        <%= render "shared/flash" if flash.any? %>
+        <%= yield %>
+      </div>
+    <% end %>
+    <%= render "shared/jscript" %>
+  </body>
+</html>

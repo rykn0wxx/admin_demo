@@ -1,0 +1,31 @@
+<% title "Anon", false %>
+
+<div class="row">
+  <div class="well">
+    <%= form_for @anon, :html => { :class => "form-inline"} do |f| %>
+      <% if @anon.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@anon.errors.count, "error") %> found and were not imported:</h2>
+          <ul>
+          <% @anon.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.hidden_field :objname %>
+      <div class="form-inputs">
+        <label class="sr-only">Chose File</label>
+        <%= f.file_field :file, :class => "form-control-file" %>
+      </div>
+
+      <div class="form-actions form-inputs">
+        <%= f.submit "Import", :class => "btn btn-primary btn-sm" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <%= link_to "Back to Admin", @anon.index_path, :class => "btn btn-sm btn-outline-primary" %>
+</div>

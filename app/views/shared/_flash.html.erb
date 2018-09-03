@@ -1,0 +1,9 @@
+<% if flash.any? %>
+<div class="app-content">
+  <div class="flashes alert alert-info alert-dismissible fade show">
+    <% flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %>"><%= value %></div>
+    <% end -%>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,39 @@
+service_level_id,ticket_type_id,contact_type_id,priority_id,user_id,start_time,end_time,actual_duration,business_duration,actual_pause,business_pause,sla_stage,location_city,location_zip
+INC - Resolve - 3,Incident,Email,3 - Normal,CarreonR,2017-09-01 02:52:48,2017-09-01 04:10:52,4684,4684,0,0,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Email,3 - Normal,PalapoC,2017-08-31 22:33:59,2017-09-01 06:14:47,504,504,27144,27144,Achieved,Kingston,K7K 6Y8
+INC - Resolve - 3,Incident,Email,3 - Normal,PalapoC,2017-09-01 02:59:09,2017-09-01 06:17:34,241,241,11664,11664,Achieved,Bresso,20091
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-23 10:55:02,2017-09-01 07:58:14,1622,1622,765370,765370,Achieved,Kennesaw,30144-7819
+INC - Resolve - 3,Incident,Phone,3 - Normal,CarreonR,2017-08-30 06:01:52,2017-09-01 08:02:24,21804,21804,158228,158228,Achieved,Bresso,20091
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-21 07:46:03,2017-09-01 08:17:41,1463,1463,950835,950835,Achieved,Kusnacht,CH-8700
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-25 11:30:30,2017-09-01 08:17:44,1278,1278,591956,591956,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 08:37:03,2017-09-01 10:10:30,2146,2146,3461,3461,Achieved,Greensboro,30642
+INC - Resolve - 3,Incident,Self-service,3 - Normal,KumarAj,2017-07-17 15:12:05,2017-09-01 10:26:01,406,406,3956830,3956830,Achieved,Kingston,K7K 6Y8
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 10:56:16,2017-09-01 11:21:46,816,816,714,714,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 10:19:33,2017-09-01 11:28:29,1031,1031,3105,3105,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 10:30:55,2017-09-01 11:28:36,2661,2661,800,800,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-09-01 11:31:36,2017-09-01 12:36:51,3915,3915,0,0,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:30:51,2017-09-01 12:49:07,742,742,75954,75954,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:04:42,2017-09-01 12:50:20,598,598,77740,77740,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:28:05,2017-09-01 12:51:10,905,905,76080,76080,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:33:17,2017-09-01 12:52:06,7203,7203,69526,69526,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:37:07,2017-09-01 12:53:16,6942,6942,69627,69627,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,RodriguezR,2017-09-01 12:46:02,2017-09-01 12:53:19,0,0,437,437,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:19:42,2017-09-01 12:55:12,1410,1410,76320,76320,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:20:00,2017-09-01 12:56:09,1391,1391,76378,76378,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-31 15:14:01,2017-09-01 12:57:17,62,62,78134,78134,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-22 11:02:28,2017-09-01 13:02:15,2045,2045,869142,869142,Canceled,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,KumarAj,2017-08-21 11:54:23,2017-09-01 13:07:08,18724,18724,936041,936041,Achieved,Ohle,D-58840
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-30 09:58:42,2017-09-01 14:35:00,226,226,189152,189152,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-31 09:56:57,2017-09-01 14:53:00,1722,1722,102441,102441,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 10:16:30,2017-09-01 14:53:53,1261,1261,15382,15382,Achieved,Atlanta,30326
+INC - Resolve - 3,Incident,Self-service,3 - Normal,SemillaR,2017-08-29 10:13:22,2017-09-01 15:09:44,115,115,276867,276867,Achieved,Greensboro,30642
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-23 03:53:27,2017-09-01 15:12:16,828,828,817501,817501,Achieved,Warrington,WA4 1NP
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 10:42:43,2017-09-01 15:13:42,505,505,15754,15754,Achieved,Goettingen,D-37075
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 08:35:46,2017-09-01 15:17:10,2223,2223,21861,21861,Achieved,Pindamonhangaba,12441-270
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 09:36:21,2017-09-01 15:26:23,2118,2118,18884,18884,Achieved,Pindamonhangaba,12441-270
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-09-01 10:42:26,2017-09-01 15:28:11,521,521,16624,16624,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Email,3 - Normal,SemillaR,2017-08-01 11:18:36,2017-09-01 16:15:35,692,692,2695527,2695527,Achieved,Terre Haute,47805
+INC - Resolve - 3,Incident,Self-service,3 - Normal,SemillaR,2017-08-01 09:30:34,2017-09-01 16:16:06,3228,3228,2699504,2699504,Achieved,Sao Paulo,04578-000
+INC - Resolve - 3,Incident,Phone,3 - Normal,SemillaR,2017-08-09 08:02:15,2017-09-01 16:18:12,2840,2840,2014117,2014117,Achieved,Bresso,20091
+INC - Resolve - 3,Incident,Self-service,3 - Normal,SemillaR,2017-08-24 10:29:45,2017-09-01 16:30:31,1667,1667,711179,711179,Achieved,Novi,48377
+INC - Resolve - 3,Incident,Email,3 - Normal,KumarAj,2017-08-31 14:36:50,2017-09-01 17:37:58,2269,2269,94999,94999,Achieved,Terre Haute,47805

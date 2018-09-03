@@ -1,0 +1,46 @@
+region_id,client_id,dim_desk_id,name,description
+Global,Novelis,Base Services,IT Active Directory L2,IT Active Directory L2
+Global,Novelis,Base Services,IT Active Directory L3,IT Active Directory L3
+Global,Novelis,Base Services,IT Base Services SYSAdmin Senior L2,IT Base Services SYSAdmin Senior L2
+Global,Novelis,Base Services,IT FIM AD Request Service Desk L2,IT FIM AD Request Service Desk L2
+Global,Novelis,Base Services,IT FIM L2,IT FIM L2
+Global,Novelis,Base Services,IT FIM L3,IT FIM L3
+Global,Novelis,Base Services,IT Messaging L2,IT Messaging L2
+Global,Novelis,Base Services,IT Messaging L3,IT Messaging L3
+Global,Novelis,Base Services,IT SCCM L2,IT SCCM L2
+Global,Novelis,Base Services,IT SCCM Software Distribution Service Desk L2,IT SCCM Software Distribution Service Desk L2
+Global,Novelis,Base Services,IT Security L2,IT Security L2
+Global,Novelis,Base Services,IT Security L3,IT Security L3
+Global,Novelis,Base Services,IT Security NEW VPN Access Request L2,IT Security NEW VPN Access Request L2
+APAC,Novelis,Deskside,IT Desktop China L2,IT Desktop China L2
+APAC,Novelis,Deskside,IT Desktop Dispatch NA L2,IT Desktop Dispatch NA L2
+APAC,Novelis,Deskside,IT Desktop Malaysia L2,IT Desktop Malaysia L2
+APAC,Novelis,Deskside,IT Desktop Seoul L2,IT Desktop Seoul L2
+APAC,Novelis,Deskside,IT Desktop Ulsan L2,IT Desktop Ulsan L2
+APAC,Novelis,Deskside,IT Desktop YeongJu L2,IT Desktop YeongJu L2
+EMEA,Novelis,Deskside,IT Desktop Dispatch NE L2,IT Desktop Dispatch NE L2
+EMEA,Novelis,Deskside,IT Desktop Gottingen L2,IT Desktop Gottingen L2
+EMEA,Novelis,Deskside,IT Desktop Italy L2,IT Desktop Italy L2
+EMEA,Novelis,Deskside,IT Desktop Latchford L2,IT Desktop Latchford L2
+EMEA,Novelis,Deskside,IT Desktop Nachterstedt L2,IT Desktop Nachterstedt L2
+EMEA,Novelis,Deskside,IT Desktop Ohle L2,IT Desktop Ohle L2
+EMEA,Novelis,Deskside,IT Desktop Sierre L2,IT Desktop Sierre L2
+EMEA,Novelis,Deskside,IT Desktop Zurich L2,IT Desktop Zurich L2
+NA,Novelis,Deskside,IT Desktop Atlanta L2,IT Desktop Atlanta L2
+NA,Novelis,Deskside,IT Desktop Dispatch NNA L2,IT Desktop Dispatch NNA L2
+NA,Novelis,Deskside,IT Desktop Fairmont L2,IT Desktop Fairmont L2
+NA,Novelis,Deskside,IT Desktop Kennesaw L2,IT Desktop Kennesaw L2
+NA,Novelis,Deskside,IT Desktop Kingston L2,IT Desktop Kingston L2
+NA,Novelis,Deskside,IT Desktop Oswego L2,IT Desktop Oswego L2
+LATAM,Novelis,Deskside,IT Desktop Dispatch NSA L2,IT Desktop Dispatch NSA L2
+LATAM,Novelis,Deskside,IT Desktop NSA Utinga L2,IT Desktop NSA Utinga L2
+LATAM,Novelis,Deskside,IT Desktop Pinda L2,IT Desktop Pinda L2
+LATAM,Novelis,Deskside,IT Desktop Sao Paulo L2,IT Desktop Sao Paulo L2
+LATAM,Novelis,Deskside,IT Desktop Utinga L2,IT Desktop Utinga L2
+APAC,Novelis,Service Desk,IT Service Desk NA L1,IT Service Desk NA L1
+EMEA,Novelis,Service Desk,IT Service Desk NE L1,IT Service Desk NE L1
+NA,Novelis,Service Desk,IT Service Desk NNA L1,IT Service Desk NNA L1
+LATAM,Novelis,Service Desk,IT Service Desk NSA L1,IT Service Desk NSA L1
+NA,Novelis,Service Desk,IT Incident Coordinator NNA L2,IT Incident Coordinator NNA L2
+NA,Novelis,Service Desk,IT Security Service Desk - Phishing L1,IT Security Service Desk - Phishing L1
+NA,Novelis,Service Desk,IT Service Desk PhishMe L1,IT Service Desk PhishMe L1

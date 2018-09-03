@@ -1,0 +1,104 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  // appearance: none;
+  // background-color: $action-color;
+  // border: 0;
+  // border-radius: $base-border-radius;
+  // color: currentColor;
+  // cursor: pointer;
+  // display: inline-block;
+  // font-family: inherit;
+  // font-size: 14px;
+  // -webkit-font-smoothing: antialiased;
+  // font-weight: 500;
+  // line-height: 36px;
+  // padding: 0 $small-spacing;
+  // text-decoration: none;
+  // transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  // user-select: none;
+  // vertical-align: middle;
+  // white-space: nowrap;
+
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 88px;
+  line-height: 36px;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+  border: 0;
+  padding: 0 6px;
+  margin: 6px 8px;
+  background: transparent;
+  color: currentColor;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover, &:active {
+    //background-color: mix($black, $action-color, 20%);
+    //color: $white;
+    background-color: rgba($white, 0.2);
+    color: currentColor;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  }
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    //outline: $focus-outline;
+    //outline-offset: $focus-outline-offset;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+  &.btn-icon {
+    padding: 0;
+  	background: none;
+    margin: 0 6px;
+  	height: 40px;
+  	min-width: 0;
+  	line-height: 24px;
+  	padding: 8px;
+  	width: 40px;
+  }
+}
+.btn-delegate {
+  color: #c8c8c8;
+  cursor: pointer;
+  padding: 5px 8px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: #fafafa;
+  }
+}
+@each $color, $value in $theme-colors {
+  .button-#{$color} {
+    @include color-yiq($value);
+    background-color: $value;
+    &:hover, &:active {
+      background-color: darken($value, 3%);
+      @include color-yiq(darken($value, 3%));
+    }
+  }
+}

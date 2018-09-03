@@ -1,0 +1,11 @@
+<div id="error_explanation">
+  <h2>
+    <%= pluralize(err.count, "error") %>
+    prohibited this <%= page.resource_name %> from being saved:
+  </h2>
+  <ul>
+    <% err.full_messages.each do |msg| %>
+      <li class="flash-error"><%= msg %></li>
+    <% end %>
+  </ul>
+</div>

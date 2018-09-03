@@ -1,0 +1,34 @@
+dim_desk_id,name,description,definition,weighting,measurement,calculation,sla_target
+Service Desk,SD - Speed - 1,Speed to Answer - Telephone Calls,% of Calls Answered within 30 seconds,0.2,,Number of telephone call Contacts answered by a Service Desk agent within the applicable time frame during a Reporting Window over total number of telephone call Contacts during the same Reporting Window  expressed as a percentage.,0.8
+Service Desk,SD - Speed - 2,Speed to Answer - Incident Self Service Tickets,% of Self-Service Tickets Answered within 4 hours,,,,0.95
+Service Desk,SD - Speed - Chat,Speed to Answer - Service-Desk Chat,% of Service Desk Chat Answered within 2 minutes,,,,0.95
+Service Desk,SD - Process - 2,Processing of LSA Incident Tickets,% of LSA Tickets Routed within 30 minutes,,Measures the percentage of Tickets regarding Incidents related to Limited Service Applications (only Phone Calls),Number of Tickets for Incidents related to Limited Service Applications routed to the correct resolver group at the correctly determined Severity Level by a Service Desk agent within the applicable time frame (as per the applicable procedure in the Procedures Manual) during a Reporting Window over total number of Tickets for Incidents related to Limited Service Applications during the same Reporting Window  expressed as a percentage.,0.95
+Service Desk,SD - Resolution - 1,Resolved on first Contact to SD (FCR),% of Tickets Resolved by the same Service Desk Agent within 24 hours,0.3,Measures number of Incidents Resolved by Service Desk support agents on the first Contact to the Service Desk. (Excludes incidents the Service Provider is not capable of resolving),Number of Incidents Resolved by Service Desk support agents on the first Contact to the Service Desk  during a Reporting Window over total number of Incident Contacts to the Service Desk during the same Reporting Window  expressed as a percentage.,0.6
+Service Desk,SD - Resolution - 2,Resolved by SD without escalation (FTR),% of Tickets Resolved within 48 hours without escalation to non-L1 groups,0.3,Measures number of Tickets Resolved by Service Desk support agents without escalation within the same day.,Number of Tickets Created and Resolved by the Service Desk within the same day without escalationover total number of Tickets  to the Service Desk during the same Reporting Window  expressed as a percentage.,0.65
+Service Desk,SD - Abandon - 1,Abandoned Rate,% of Calls Abandoned,0.2,Measures the Abandon Rate for all telephone call Contacts made to the Service Desk during a calendar month,The Abandon Rate of all telephone call Contacts made to the Service Desk for a calendar month shall be no greater than the rate provided in the metric.,0.05
+Service Desk,SD - Account - 3,Standard Account Admin (AD password reset),% completion of all AD password reset within 15 minutes,,Turnaround time from receipt of approved request to completion.,Number of Requestor Account administration requests that are completed in the applicable time frame during a Reporting Window over total number of Requestor Account administration requests during the same Reporting Window  expressed as a percentage.,0.95
+Service Desk,SD - Account - 4,Expedited Account Admin (Suspension of Acct),% completion of all Suspension of Account within 10 minutes,,Turnaround time from receipt of approved request to completion,Number of expedited Requestor Account administration requests that are completed in the applicable time frame during a Reporting Window over total number of expedited level 3 Requestor Account administration requests during the same Reporting Window  expressed as a percentage.,1
+Deskside,Response-Platinum,Response on Platinum Services,% of Tickets Responded related to Platinum users within 15 minutes,0.1,,,0.99
+Deskside,Response-Gold,Response on all Gold Service Location,% of Self-Service Tickets Answered within 4 hours,0.3,,,0.9
+Deskside,Response-Dispatch,Response on all Dispacth Location,% of Tickets Responded related to Dispatch Site Locations within 4 hours,,,,0.9
+Deskside,Resolve-Platinum(A),Resolution on Platinum Services,% of Tickets Resolved related to Platinum users within 4 hours,,,,0.99
+Deskside,Resolve-Platinum(B),Resolution on Platinum Services,% of Tickets Resolved related to Platinum users within 8 hours,,,,1
+Deskside,Resolve-Gold-P1 - Critical,Resolution on P1 Gold Service Location,% of P1 Tickets Resolved related to Gold Site Locations within 1 hour,,,,0.92
+Deskside,Resolve-Gold-P2 - Urgent,Resolution on P2 Gold Service Location,% of P2 Tickets Resolved related to Gold Site Locations within 3 hour,0.1,,,0.92
+Deskside,Resolve-Gold-P3 - Normal(A),Resolution on P3 Gold Service Location,% of P3 Tickets Resolved related to Gold Site Locations within 9 hour,0.4,,,0.75
+Deskside,Resolve-Gold-P3 - Normal(B),Resolution on P3 Gold Service Location,% of P3 Tickets Resolved related to Gold Site Locations within 18 hour,0.35,,,0.92
+Deskside,Resolve-Dispatch,Resolution on all Dispacth Location,% of Tickets Resolved related to Dispatch Site Locations within 8 hours,,,,0.9
+Deskside,IMAC-1,Standard Request for all Service Locations,% of Standard request completed within 3 days,,,,0.9
+Deskside,IMAC-3,Expedited Request for EUC Hard IMACs,% of Expedited request completed within 9 hours,,,,0.9
+Base Services,P - Patch - 3,Standard Patches deployed,% deployed approved patches within 21 days,0.1,,,0.95
+Base Services,SP-3A SR Software Packages,Packaging of Standard Software Packages,% of packages completed within 10 business days,0.05,,,0.8
+Base Services,SP-3B SR Software Packages,Packaging of Standard Software Packages,% of packages completed within 14 business days,0.05,,,0.98
+Base Services,INC - Respond - 1,Response on Incident Tickets(Extensive),% of Incident Tickets Responded within 15 minutes (Global/Extensive),,,,0.9
+Base Services,INC - Respond - 2,Response on Incident Tickets(Significant),% of Incident Tickets Responded within 30 minutes (Significant/Large),,,,0.9
+Base Services,INC - Respond - 3,Response on Incident Tickets(Moderate),% of Incident Tickets Responded within 60 minutes (Moderate/Limited),,,,0.9
+Base Services,INC - Resolve - 1,Response on Incident Tickets(Extensive),% of Incident Tickets Resolve within 8 hours (Global/Extensive),,,,0.9
+Base Services,INC - Resolve - 2,Response on Incident Tickets(Significant),% of Incident Tickets Resolve within 16 hours (Significant/Large),,,,0.9
+Base Services,INC - Resolve - 3,Response on Incident Tickets(Moderate),% of Incident Tickets Resolve 24 hours (Moderate/Limited),,,,0.9
+Base Services,Requested Item - 2,Completion of requested TASK,% completetion of Requested Task within 4 hours,,,,0.9
+Base Services,Requested Item - 3,Completion of requested TASK,% completetion of Requested Task within 8 hours,,,,0.9
+Base Services,Requested Item - 5,Completion of requested TASK,% completetion of Requested Task within 4 days,,,,0.9

@@ -1,0 +1,2 @@
+dim_desk_id,name,description,definition,weighting,measurement,calculation,sla_target
+Service Desk,SD - Speed - 1,Speed to Answer - Telephone Calls,% of Calls Answered within 30 seconds,0.2,,Number of telephone call Contacts answered by a Service Desk agent within the applicable time frame during a Reporting Window over total number of telephone call Contacts during the same Reporting Window, expressed as a percentage,0.8

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="rykn0wxx" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <title>
+      <%= content_for(:title) %> | rykn0wxx
+    </title>
+    <%= render "stylesheet" %>
+    <%= tag :meta, name: 'turbolinks-root', content: '/admin' %>
+    <%= tag :meta, name: 'turbolinks-cache-control', content: 'no-cache' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="mudhead <%= controller_name %>" data-ctrl-action="<%= action_name %>">
+    <%= render "icons" %>
+
+    <div class="app-container">
+      <%= render "navigation" -%>
+
+      <main class="main-content" style="opacity:0;" role="main">
+        <section class="topbar">
+          <div class="bar">
+            <h4 class="md-title"><%= link_to "rykn0wxx", index_path %></h4>
+            <span class="material-icons md-spacer">tune</span>
+            <span class="md-subhead">Administration</span>
+            <span class="flex"></span>
+            <span class="md-subhead">
+              <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+            </span>
+          </div>
+        </section>
+        <%= render "flashes" -%>
+        <%= yield %>
+      </main>
+    </div>
+
+    <%= render "javascript" %>
+  </body>
+</html>

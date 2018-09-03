@@ -1,0 +1,74 @@
+<% title "Registration", false %>
+
+<%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "form-horizontal"}  do |f| %>
+  <div class="login-block registration">
+    <div class="block">
+      <div class="login-logo">
+        <%= link_to root_path do %>
+          <b>mud</b>head
+        <% end %>
+      </div>
+      <div class="content">
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">person_outline</i>
+              </span>
+              <%= f.text_field :username, :required => true,:class => "form-control input-sm", :placeholder => "Username" %>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">mail</i>
+              </span>
+              <%= f.email_field :email, :required => true, :class => "form-control input-sm", :placeholder => "Email" %>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">face</i>
+              </span>
+              <%= f.text_field :name, :required => true, :class => "form-control input-sm", :placeholder => "Name" %>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">lock</i>
+              </span>
+              <%= f.password_field :password, :required => true, :class => "form-control input-sm", :placeholder => "Password" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">lock_outline</i>
+              </span>
+              <%= f.password_field :password_confirmation, :required => true, :class => "form-control input-sm", :placeholder => "Password Confirmation" %>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+
+        </div>
+        <div class="form-row">
+          <div class="col-md-6">
+            <%= link_to "Already registered", new_session_path(resource_name), :class => "btn btn-sm btn-clean", :data => { turbolinks: false } %>
+          </div>
+          <div class="col-md-6">
+            <%= f.button :submit, "Register", :class => "btn btn-sm btn-clean" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

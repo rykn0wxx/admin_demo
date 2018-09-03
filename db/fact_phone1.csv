@@ -1,0 +1,10 @@
+record_date,dim_time_id,project_id,language_id,timezone_id,calls_off,calls_ans,calls_wsl,calls_abn,calls_a30,time_talk,time_hold,time_wrap,queue_ans,queue_max
+2017-Aug-01 00:00:00,1,Acosta_ServiceDesk,English,US/Eastern,2,2,2,0,0,1455,0,88,18,12
+2017-Aug-01 00:00:00,1,Amcor,English,US/Eastern,1,1,1,0,0,229,0,60,8,8
+2017-Aug-01 00:00:00,1,BCGA,English,US/Central,3,3,3,0,0,3144,0,251,24,12
+2017-Aug-01 00:00:00,1,Covance,Chinese Mandarin,US/Central,3,3,3,0,0,1066,0,19,18,8
+2017-Aug-01 00:00:00,1,Covance,English,US/Central,1,1,1,0,0,13,0,25,7,7
+2017-Aug-01 00:00:00,1,Covance,Japanese,US/Central,1,1,1,0,0,213,0,7,7,7
+2017-Aug-01 00:00:00,1,DeVry_Stefanini,English,US/Central,2,2,2,0,0,2998,177,120,11,8
+2017-Aug-01 00:00:00,1,Epsilon,English,US/Central,1,1,1,0,0,310,0,60,6,6
+2017-Aug-01 00:00:00,1,Huron_Consulting_Group,English,US/Central,1,1,1,0,0,702,5,6,4,4

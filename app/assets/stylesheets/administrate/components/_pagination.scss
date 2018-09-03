@@ -1,0 +1,75 @@
+.pagination {
+  margin-top: $base-spacing;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+  text-align: center;
+
+  .first,
+  .prev,
+  .page,
+  .next,
+  .last {
+    margin: $small-spacing;
+  }
+
+  .current {
+    font-weight: $bold-font-weight;
+  }
+}
+
+.pagination {
+  background: #f1f1f1;
+	border: 1px solid #e5e5e5;
+	padding: 1em;
+	cursor: default;
+  position: relative;
+  // display: inline-flex;
+  vertical-align: middle;
+  text-align: center;
+  a, span, em {
+    color: #212121;
+    position: relative;
+    flex: 0 1 auto;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 4px 6px;
+    font-size: 1.40rem;
+    border-radius: 0;
+    transition: all .2s ease-in-out;
+    background-color: rgba(#ced4da, 0.2);
+  }
+  a {
+    background-color: rgba(0,0,0,0);
+  }
+  span {
+    &:not(.current) {
+      padding: 0;
+    }
+    &:hover:not(.next_page) {
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 1px 0px rgba(0, 0, 0, 0.19), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    }
+  }
+  .previous_page {
+    background-color: rgba(0,0,0,0);
+    margin-right: 0.5rem !important;
+  }
+  .next_page {
+    background-color: rgba(0,0,0,0);
+    margin-left: 0.5rem !important;
+  }
+  .current {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 1px 0px rgba(0, 0, 0, 0.19), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    background-color: #adb5bd;
+    color: #111;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+  }
+  .disabled {
+    color: #aaaaaa;
+  }
+}

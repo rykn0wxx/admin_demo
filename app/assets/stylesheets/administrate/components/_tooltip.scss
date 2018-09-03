@@ -1,0 +1,46 @@
+.md-panel-wrapper {
+  height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+  pointer-events: none;
+	z-index: 100;
+}
+.md-tooltip {
+  margin-top: -14px;
+	z-index: 800;
+  pointer-events: none;
+	border-radius: 4px;
+	overflow: hidden;
+	font-weight: 500;
+	font-size: 14px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	height: 32px;
+  opacity: 0;
+  // transform: scale(0);
+	line-height: 32px;
+	padding-right: 16px;
+	padding-left: 16px;
+  background-color: #424242;
+  color: rgba(255,255,255,0.87);
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-name: zoomIn;
+  &.md-show {
+    position: fixed;
+    // transform: scale(1);
+    opacity: .9;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,156 @@
+/*zInCalls_ESTv2*/
+= 
+	If [zClient_EST] = "Acosta_ServiceDesk" Or [zClient_EST] = "DeVry_Stefanini" Or [zClient_EST] = "Brown-Forman" Or [zClient_EST] = "Covance" Or [zClient_EST] = "EVOQUA_ServiceDesk" Then
+	[qTz_EST].[Answered Contacts] 
+	Else 
+	
+	(
+	[qTz_EST].[Offered Contacts] - 
+	
+	Sum (
+	If [qTz_EST].[Timezone] = "US/Eastern" Or [qTz_EST].[Timezone] = "Europe/Berlin" Then
+	
+	If [zClient_EST] = "Route One" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Amcor" Or [zClient_EST] = "MasterCard" Or [zClient_EST] = "Novelis" Or [zClient_EST] = "Alcoa NOA" Or [zClient_EST] = "Alcoa Europe" Or [zClient_EST] = "Cambridge_Associates"
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Swagelok" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Embraer" Or [zClient_EST] = "Ferro" Or [zClient_EST] = "Louis Vuitton North America" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Town Sports International" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "NBA Service Desk" Or [zClient_EST] = "Ceva Global Service Desk" 
+	Then 0
+	
+	ElseIf [zClient_EST] = "Visteon" Or [zClient_EST] = "Hanon" Or [zClient_EST] = "Reydel" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	Else 
+	[qTz_EST].[Abandoned Contacts]
+	)
+	)
+/*zInCalls_ESTv2*/
+
+/*zInSLACalls_EST*/
+=
+Sum(
+	If [qTz_EST].[Timezone] = "US/Eastern" Or [qTz_EST].[Timezone] = "Europe/Berlin" Then
+	
+	If [zClient_EST] = "Route One"
+	Then [qTz_EST].[Answered Within 20 sec]
+	
+	ElseIf [zClient_EST] = "DeVry_Stefanini" 
+	Then [qTz_EST].[Answered Within 20 sec]
+	
+	ElseIf [zClient_EST] = "Amcor" Or [zClient_EST] = "MasterCard" Or [zClient_EST] = "Novelis" Or [zClient_EST] = "Alcoa NOA" Or [zClient_EST] = "Alcoa Europe" Or [zClient_EST] = "Brown-Forman" Or [zClient_EST] = "Covance" Or [zClient_EST] = "EVOQUA_ServiceDesk" Or [zClient_EST] = "Cambridge_Associates"
+	Then [qTz_EST].[Answered Within 30 sec]
+	
+	ElseIf [zClient_EST] = "Swagelok" 
+	Then [qTz_EST].[Answered Within 45 sec]
+	
+	ElseIf [zClient_EST] = "Embraer" Or [zClient_EST] = "Ferro" Or [zClient_EST] = "Louis Vuitton North America" Or [zClient_EST] = "Career Education Corporation" Or [zClient_EST] = "NBA_Service_Desk"
+	Then [qTz_EST].[Answered Within 1 min]
+	
+	ElseIf [zClient_EST] = "Town Sports International" Or [zClient_EST] = "Ceva_Global_Service_Desk" 
+	Then [qTz_EST].[Answered Within 90 sec]
+	
+	ElseIf [zClient_EST] = "Acosta_ServiceDesk" Or [zClient_EST] = "Visteon" Or [zClient_EST] = "Hanon" Or [zClient_EST] = "Reydel" 
+	Then [qTz_EST].[Answered Within 2 min]
+	
+	Else
+	0
+)
+/*zInSLACalls_EST*/
+
+/*grpABR_EST*/
+=( [qTz_EST].[Abandoned Contacts] - 
+	Sum (
+	If [qTz_EST].[Timezone] = "US/Eastern" Or [qTz_EST].[Timezone] = "Europe/Berlin" Then
+	
+	If [zClient_EST] = "Route One" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Amcor" Or [zClient_EST] = "MasterCard" Or [zClient_EST] = "Novelis" Or [zClient_EST] = "Alcoa NOA" Or [zClient_EST] = "Alcoa Europe" Or [zClient_EST] = "Cambridge_Associates"
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Swagelok" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Embraer" Or [zClient_EST] = "Ferro" Or [zClient_EST] = "Louis Vuitton North America" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_CST] = "Career Education Corporation" 
+	Then [qTz_CST].[Abandoned Contacts before 30 sec] 
+	
+	ElseIf [zClient_EST] = "Town Sports International" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_EST] = "Acosta_ServiceDesk" Or [zClient_EST] = "Visteon" 
+	Then [qTz_EST].[Abandoned Contacts before 30 sec]
+	
+	Else 0
+	)) / [qTz_EST].[Offered Contacts]
+/*grpABR_EST*/
+
+/*grpABR_CST*/
+=( [qTz_CST].[Abandoned Contacts] - 
+	Sum(
+	If [qTz_CST].[Timezone] = "US/Central" Then
+	
+	If [zClient_CST] = "Career Education Corporation" 
+	Then [qTz_CST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_CST] = "Epsilon" 
+	Then [qTz_CST].[Abandoned Contacts before 30 sec]
+	
+	ElseIf [zClient_CST] = "John Deere" 
+	Then [qTz_CST].[Abandoned Contacts before 60 sec]
+	
+	Else 0
+	)
+) / [qTz_CST].[Offered Contacts]
+/*grpABR_CST*/
+
+/*zInCalls_CSTv2*/
+= 
+If [qTz_CST].[Timezone] = "US/Central" Then
+	
+	If [zClient_CST] = "John Deere" Then [qTz_CST].[Answered Contacts] 	
+	
+Else
+	(
+	[qTz_CST].[Offered Contacts] - 
+	Sum(
+	If [zClient_CST] = "Career Education Corporation" Then [qTz_CST].[Abandoned Contacts]
+	
+	ElseIf [zClient_CST] = "BCGA" Then [qTz_CST].[Abandoned Contacts before 60 sec]
+	
+	ElseIf [zClient_CST] = "Epsilon" Or [zClient_CST] = "Huron Consulting Group" Then 0
+	
+	Else [qTz_CST].[Abandoned Contacts]
+	)
+	)
+
+/*zInCalls_CSTv2*/
+
+/*zInSLACalls_CST*/
+=
+Sum(
+	If [qTz_CST].[Timezone] = "US/Central" Then
+	
+	If [zClient_CST] = "Career Education Corporation" 
+	Then [qTz_CST].[Answered Within 30 sec] 
+	
+	ElseIf [zClient_CST] = "Epsilon" Or [zClient_CST] = "Huron Consulting Group" Or [zClient_CST] = "BCGA"
+	Then [qTz_CST].[Answered Within 1 min]
+	
+	ElseIf [zClient_CST] = "John Deere" 
+	Then [qTz_CST].[Answered Within 30 sec] 
+	Else 0
+)
+/*zInSLACalls_CST*/

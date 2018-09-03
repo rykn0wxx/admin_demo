@@ -1,0 +1,6 @@
+name,label,value
+1 - Critical,1 - Global/Extensive/Widespread,1
+2 - Urgent,2 - Significant/Large,2
+3 - Normal,3 - Moderate/Limited,3
+4 - Low,4 - Minor/Localized,4
+5 - Project,5 - Project,5

@@ -1,0 +1,13 @@
+<% present page, "show" do |presenter| %>
+  <dl>
+    <% page.attributes.each do |attribute| %>
+      <dt class="attribute-label" id="<%= attribute.name %>">
+        <%= t("helpers.label.#{resource_name}.#{attribute.name}", default: attribute.name.titleize) %>
+      </dt>
+
+      <dd id="<%= attribute.name %>" class="attribute-data attribute-data--<%= attribute.html_class %>">
+        <%= presenter.render_fld presenter, attribute %>
+      </dd>
+    <% end %>
+  </dl>
+<% end %>

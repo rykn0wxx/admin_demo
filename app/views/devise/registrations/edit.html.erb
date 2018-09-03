@@ -1,0 +1,22 @@
+<% title "Edit Profile", false %>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="well">
+      <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal"}  do |f| %>
+        <fieldset>
+          <legend><%= current_user.name %></legend>
+          <%= f.input :current_password, :autocomplete => "off", hint: ("we need your current password to confirm your changes") %>
+          <%= f.input :password, :autocomplete => "off", required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: true, :autocomplete => "off" %>
+          <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+              <%= link_to "Cancel", new_session_path(resource_name), :class => "btn btn-sm btn-default", :data => { turbolinks: false } %>
+              <%= f.button :submit, "Update", :class => "btn-primary" %>
+            </div>
+          </div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<% content_for(:title) do %>
+  <%= display_resource_name(page.resource_name) %>
+<% end %>
+
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title" id="page-title">
+    <%= content_for(:title) %>
+  </h1>
+
+  <%= render("search", search_term: search_term, resource_name: display_resource_name(page.resource_name)) if show_search_bar %>
+
+  <% if can? :manage, User %>
+    <div>
+      <%= link_to [:import, namespace, page.resource_path.pluralize], :class => "button btn-icon" do %>
+        <span class="material-icons">file_upload</span>
+      <% end %>
+      <%= link_to("New #{page.resource_name.titleize.downcase}", [:new, namespace, page.resource_path], :class => "button") %>
+    </div>
+  <% end %>
+
+</header>
+
+<section class="main-content__body main-content__body--flush" id="main_content">
+  <%= render "admin/application/content", :page => page, :resources => resources, table_title: "page-title"  %>
+</section>

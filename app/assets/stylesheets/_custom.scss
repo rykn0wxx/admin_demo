@@ -1,0 +1,209 @@
+.rykn0wxx .mudhead {
+  .no-pad {
+    padding: 0 !important;
+  }
+  a {
+    transition: all 0.3s ease-in-out;
+  }
+  #question_mark {
+    fill: $brand-secondary;
+  }
+  .slideInDown {
+    @extend %animated;
+    animation-name: slideInDown;
+  }
+  .fadingExit {
+    animation-name: fadingExit;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+  }
+  // Landing page
+  &.landing {
+    padding: 0;
+    height: 100%;
+  }
+  .intro-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    color: $gray-lighter;
+    background: url(intro-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: table;
+    width: 100%;
+    .intro-message {
+      position: relative;
+      padding-top: 20%;
+      padding-bottom: 20%;
+      > h1 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 5em;
+      }
+      > h3 {
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+      }
+    }
+    .intro-divider {
+      min-width: 100px;
+      max-width: 400px;
+      border-top: 1px solid #f8f8f8;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+    @media(max-width:767px) {
+      .intro-message {
+        padding-bottom: 15%;
+        > h1 {
+          font-size: 3em;
+        }
+      }
+    }
+    .btn-enter {
+      border: 1px solid $brand-primary;
+      min-width: 150px;
+      line-height: 1;
+      i {
+        font-size: 27px;
+        line-height: 1;
+        display: block;
+        color: $brand-primary;
+      }
+      &:hover {
+        background-color: rgba(0,0,0,0.2);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      }
+    }
+  }
+  .app-content {
+  	padding: 1rem;
+  	margin: 1rem -15px;
+    border: 0 solid rgba(0,0,0,0);
+    position: absolute;
+  	top: -25px;
+  	width: 100%;
+  	z-index: 1040;
+    animation-name: fadingEntrance;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    @media (min-width: 576px) {
+      padding: 1.5rem;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 0;
+    }
+    .flashes {
+    	text-align: center;
+    	padding: 1.75rem 0;
+    	margin: 0;
+    }
+    .flash {
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+  }
+  .fade {
+    &.show {
+      opacity: 1;
+    }
+  }
+  // Alert
+  .alert {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.3), 0px 4px 5px 0px rgba(0, 0, 0, 0.19), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    &.alert-success {
+      background-color: rgba($alert-success-bg, 0.85);
+    }
+    &.alert-info {
+      background-color: rgba($alert-info-bg, 0.85);
+    }
+    &.alert-warning {
+      background-color: rgba($alert-warning-bg, 0.85);
+    }
+    &.alert-danger {
+      background-color: rgba($alert-danger-bg, 0.85);
+    }
+  }
+  // Login Page
+  .login-block {
+    width: 300px;
+  	margin: 50px auto 0px;
+    &.registration {
+      width: 600px;
+    }
+    .block {
+      .login-logo {
+        padding: 8px 10px;
+        width: 100%;
+        font-size: 35px;
+      	text-align: center;
+      	font-weight: 400;
+        letter-spacing: 0.02em;
+        a {
+          color: $gray-lighter;
+          text-decoration: none;
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+          }
+        }
+      }
+      .content {
+        padding: 0 0 10px 0;
+        @include clrfix();
+      }
+    }
+    .form-row {
+      width: 100%;
+      margin-bottom: 10px;
+      float: left;
+    	line-height: 30px;
+      @include clrfix();
+    }
+    .input-group-addon {
+      border: 0 solid transparent;
+      padding: 0 10px;
+      background-color: rgba(0,0,0,0.4);
+      .material-icons {
+        color: #fafafa;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+    .form-control {
+      background-color: rgba(0,0,0,0.2);
+      color: $gray-lighter;
+      @include glowing-input;
+    }
+    .btn-clean {
+      background-color: transparent;
+      border: 1px solid $brand-primary;
+      color: $brand-primary;
+      display: block;
+      width: 100%;
+      &:hover {
+        background: rgba(0,0,0,0.2);
+        color: $gray-lighter;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      }
+    }
+  }
+}
+
+@keyframes fadingEntrance {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadingExit {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

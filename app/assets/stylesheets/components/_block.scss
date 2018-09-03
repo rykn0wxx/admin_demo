@@ -1,0 +1,40 @@
+.box {
+  position: relative;
+	border-top: 3px solid #d2d6de;
+	margin-bottom: 20px;
+	width: 100%;
+  background-color: $gray-light;
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.3), 0px 4px 5px 0px rgba(0, 0, 0, 0.19), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  .box-header {
+    background: rgba(0,0,0,0.05);
+    color: $text-color;
+    display: block;
+    padding: 10px;
+    position: relative;
+    @include clrfix;
+    > .fa {
+      margin-right: 5px;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1;
+    }
+    .box-title {
+      display: inline-block;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .box-tools {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+  }
+  .box-body {
+    padding: 10px;
+    @include clrfix;
+  }
+}

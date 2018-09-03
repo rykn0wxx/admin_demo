@@ -1,0 +1,17 @@
+name,label,region_id
+Chinese Cantonese,yue,APAC
+Chinese Mandarin,cmn,APAC
+English,eng,NA
+French,fre,EMEA
+German,ger,EMEA
+Indonesian,ind,APAC
+Italian,ita,EMEA
+Japanese,jpn,APAC
+Korean,kor,APAC
+Portuguese,por,LATAM
+Romanian,rum,EMEA
+Russian,rus,EMEA
+Spanish,spa,NA
+Thai,tha,APAC
+Vietnamese,vie,APAC
+Undefined,LNG,Global

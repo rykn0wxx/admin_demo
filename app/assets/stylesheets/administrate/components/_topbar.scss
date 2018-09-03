@@ -1,0 +1,43 @@
+.topbar {
+  transition-timing-function: cubic-bezier(.35,0,.25,1);
+  transition-property: background-color,fill,color;
+  background: #52575C;
+  background-image: linear-gradient(lighten(#52575C, 3%), #52575C 60%, darken(#52575C, 4%));
+  background-repeat: no-repeat;
+  color: #c8c8c8;
+  z-index: 3;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  min-height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  .bar {
+    // max-width: 864px;
+    padding: 0;
+    margin: 0 24px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex: 1;
+    font-size: 20px;
+    letter-spacing: .005em;
+    font-weight: 400;
+    .material-icons {
+      font-size: 16px;
+      opacity: 0.7;
+    }
+    a {
+      color: $brand-primary;
+      &:hover, &:focus, &:active {
+        color: lighten($brand-primary, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+html {
+  background-color: $base-background-color;
+  box-sizing: border-box;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+figure {
+  margin: 0;
+}
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+.hide {
+  display: none;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  margin-left:  10px;
+}
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.tbl-content {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  &.content-out {
+    animation-name: fadeOut;
+  }
+}
+.flex {
+  flex: 1;
+  box-sizing: border-box;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
